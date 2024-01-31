@@ -6,6 +6,7 @@ import lombok.Getter;
 public enum ExportFormat {
     EXCEL("EXCEL"),
     TXT("TXT"),
+    CSV("CSV"),
     JSON("JSON");
 
 

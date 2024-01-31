@@ -10,5 +10,7 @@ import lombok.*;
 public class ColumnInfoBean {
     private String fieldName;
     private ColumnType columnType;
-    private OptionsBean options;
+    private int blankPercentage;
+    private String expression;
+    private int reoccurrenceCount;
 }

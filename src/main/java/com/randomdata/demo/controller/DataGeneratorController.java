@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController("data-generatorController")
 @RequestMapping(value = "/data-generator", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -21,5 +22,10 @@ public class DataGeneratorController {
     @PostMapping("/data/random")
     public void randomData(@RequestBody DataGenerateRequestBean dataGenerateRequestBean) throws IOException {
         dataGeneratorService.generateRandomData(dataGenerateRequestBean);
+    }
+
+    @GetMapping("/data/random/columnTypes")
+    public List<String> getColumnTypes(){
+        return dataGeneratorService.generateColumnTypes();
     }
 }
